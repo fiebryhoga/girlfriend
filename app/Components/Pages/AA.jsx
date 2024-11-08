@@ -14,7 +14,7 @@ const AA = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col gap-60">
+    <div className="w-full h-full flex flex-col gap-4">
       <div className="w-full flex flex-row justify-between mt-10">
         <div data-aos="zoom-in" className="w-8">
           <img className="w-full" src="/Assets/Images/Text-1.png" alt="" />
