@@ -12,26 +12,18 @@ const Page = () => {
   const [isHidden, setIsHidden] = useState(false);
 
   const handleStart = () => {
-    // Play audio
-    const audio = new Audio("/Assets/Music/terima_kasih.mp3"); // Ganti dengan path audio yang benar
+    const audio = new Audio("/Assets/Music/terima_kasih.mp3");
     audio.play();
 
-    // setTimeout(() => {
-    //   window.scrollBy({
-    //     top: 1000, // Pergeser 100px ke bawah
-    //     behavior: "smooth", // Menggunakan scroll yang smooth
-    //   });
-    // }, 1000); // Jeda 1 detik
 
-    // Set state untuk mengubah tampilan dari cover ke main
     setIsStarted(true);
     setTimeout(() => setIsHidden(true), 800);
   };
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi
-      easing: "ease-out", // Jenis easing
+      duration: 1000,
+      easing: "ease-out",
     });
   }, []);
 
@@ -43,7 +35,7 @@ const Page = () => {
         } ${isHidden ? "hidden" : ""}`}
       >
         <img
-          className="w-full h-full absolute"
+          className="w-full h-full bg-cover absolute"
           src="/Assets/Images/bg.png"
           alt=""
         />
@@ -62,9 +54,7 @@ const Page = () => {
             : "hidden opacity-0 transition-opacity duration-2000 ease-out"
         } transition-opacity duration-2000 ease-out`}
       >
-        {/* <div className="flex h-screen w-screen justify-center items-center">
-          <h1>Scroll Down</h1>
-        </div> */}
+        
         
           <Layout>
             <AA />
